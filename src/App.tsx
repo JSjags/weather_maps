@@ -1,11 +1,26 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Map from "./components/Map";
+import Navbar from "./components/Navbar";
+import SideBar from "./components/SideBar";
+import { cityId, location } from "./types";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [location, setLocation]: location = useState([7.49446, 5.52794]);
+  const [cityId, setCityId]: cityId = useState(0);
 
-  return <h1>Hello World!!!</h1>;
+  return (
+    <div className="w-full min-h-[100vh] bg-slate-100 overflow-hidden">
+      <Navbar />
+      <main className="relative flex">
+        <SideBar
+          setLocation={setLocation}
+          setCityId={setCityId}
+          cityId={cityId}
+        />
+        <Map location={location} cityId={cityId} />
+      </main>
+    </div>
+  );
 }
 
 export default App;
