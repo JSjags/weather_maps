@@ -45,7 +45,7 @@ const SideBar: React.FC<SidebarComponentProps> = ({
       </div>
       <div
         className={`${
-          toggle ? "min-w-[0] max-w-[0]" : "min-w-[220px]max-w-[260px]"
+          toggle ? "min-w-[0] max-w-[0]" : "min-w-[225px]max-w-[260px]"
         } relative overflow-x-visible pt-3 h-[90vh] bg-gray-100 duration-300 ease-in-out`}
       >
         <h1 className="text-[24px] px-3 font-semibold">Cities</h1>
