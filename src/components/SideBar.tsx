@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect, useState } from "react";
 import { cities } from "../constants/cities";
 import { SidebarComponentProps } from "../types";
 
-import menu from "../assets/menu.svg";
+import menu from "../assets/Menu.svg";
 import close from "../assets/close.svg";
 
 import search from "../assets/search.png";
