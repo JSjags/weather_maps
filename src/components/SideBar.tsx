@@ -26,6 +26,9 @@ const SideBar: React.FC<SidebarComponentProps> = ({
         if (window.innerWidth > 240) {
           setToggle(false);
         }
+        if (window.innerWidth < 640) {
+          setToggle(true);
+        }
       });
     };
   }, []);
@@ -34,18 +37,18 @@ const SideBar: React.FC<SidebarComponentProps> = ({
     <div className="relative">
       {/* menu btn */}
       <div
-        className="sm:hidden absolute px-2 flex items-center justify-center bg-gray-100 rounded-br -right-14 top-0 z-40 border-l border-solid border-gray-200 cursor-pointer hover:bg-gray-200 duration-200
+        className="sm:hidden absolute px-2 flex items-center justify-center bg-gray-100 rounded-br -right-11 top-0 z-40 border-l border-solid border-gray-200 cursor-pointer hover:bg-gray-200 duration-200
        ease-in-out"
         onClick={() => setToggle(!toggle)}
       >
         <img
           src={toggle ? menu : close}
-          className="w-[40px] h-[60px] brightness-0"
+          className="w-[30px] h-[50px] brightness-0"
         />
       </div>
       <div
         className={`${
-          toggle ? "min-w-[0] max-w-[0]" : "min-w-[225px]max-w-[260px]"
+          toggle ? "min-w-[0] max-w-[0]" : "min-w-[225px]max-w-[240px]"
         } relative overflow-x-visible pt-3 h-[90vh] bg-gray-100 duration-300 ease-in-out`}
       >
         <h1 className="text-[24px] px-3 font-semibold">Cities</h1>
