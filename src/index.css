@@ -7,19 +7,23 @@
 * {
   font-family: "Quicksand", sans-serif;
 }
-.fix-scrollbar::-webkit-scrollbar {
+.fix-scrollbar::-webkit-scrollbar,
+.popup .mapboxgl-popup-content::-webkit-scrollbar {
   appearance: none;
   width: 8px;
 }
-.fix-scrollbar::-webkit-scrollbar-thumb {
+.fix-scrollbar::-webkit-scrollbar-thumb,
+.popup .mapboxgl-popup-content::-webkit-scrollbar-thumb {
   background-color: turquoise;
   border-radius: 4px;
   overflow: hidden;
 }
-.fix-scrollbar::-webkit-scrollbar-track {
+.fix-scrollbar::-webkit-scrollbar-track,
+.popup .mapboxgl-popup-content::-webkit-scrollbar-track {
   background-color: white;
 }
-.fix-scrollbar::-webkit-scrollbar-track-piece {
+.fix-scrollbar::-webkit-scrollbar-track-piece,
+.popup .mapboxgl-popup-content::-webkit-scrollbar-track-piece {
   border-radius: 4px;
   overflow: hidden;
   background-color: transparent;
@@ -32,7 +36,35 @@
 }
 .hide {
   opacity: 0;
-  display: block;
+  display: none;
   transition: all 200ms ease;
   transform: translateY(-50px);
+}
+.popup .mapboxgl-popup-content {
+  max-height: 300px;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  min-width: 240px;
+  padding: 10px;
+}
+.popup button {
+  scale: 2;
+  top: 10px;
+  right: 5px;
+  padding: 0 5px;
+  border-radius: 0 0 0 5px;
+}
+.popup h2 {
+  font-size: 19px;
+  font-weight: 700;
+}
+.popup h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.popup span,
+.popup p {
+  font-size: 14px;
+  margin-top: 5px;
 }

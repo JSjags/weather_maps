@@ -9,7 +9,7 @@ function App() {
   const [cityId, setCityId]: cityId = useState(0);
 
   return (
-    <div className="w-full min-h-[100vh] bg-slate-100 overflow-hidden">
+    <div className="mx-auto w-full max-w-[1440px] min-h-[100vh] bg-slate-100 overflow-hidden">
       <Navbar />
       <main className="relative flex">
         <SideBar
