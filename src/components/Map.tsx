@@ -11,7 +11,8 @@ const Map: React.FC<MapComponentProps> = ({ location, cityId }) => {
 
   // Initialize map
   useEffect(() => {
-    mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiamVzamFnczAxIiwiYSI6ImNsZmsyYjY5cDA2bjczdW1jd20xdXk4anUifQ.oO_qF-jFVpfPiN5JM1vJGw";
 
     const map = new mapboxgl.Map({
       container: "map", // container ID
@@ -215,9 +216,7 @@ const Map: React.FC<MapComponentProps> = ({ location, cityId }) => {
         cities.map((city, i) =>
           fetch(
             `
-            http://api.weatherapi.com/v1/forecast.json?q=${city.coords[1]},${
-              city.coords[0]
-            }&key=${import.meta.env.VITE_WEATHER_API_KEY}`
+            https://api.weatherapi.com/v1/forecast.json?q=${city.coords[1]},${city.coords[0]}&key=6c5b2f9a956e45cba5c233319232303`
           ).then((res) => res.json())
         )
       );
