@@ -216,7 +216,7 @@ const Map: React.FC<MapComponentProps> = ({ location, cityId }) => {
         cities.map((city, i) =>
           fetch(
             `
-            http://api.weatherapi.com/v1/forecast.json?q=${city.coords[1]},${city.coords[0]}&key=6c5b2f9a956e45cba5c233319232303`
+            https://api.weatherapi.com/v1/forecast.json?q=${city.coords[1]},${city.coords[0]}&key=6c5b2f9a956e45cba5c233319232303`
           ).then((res) => res.json())
         )
       );
